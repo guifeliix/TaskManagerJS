@@ -7,9 +7,9 @@
     "start": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Guilherme Felix Carlini de Lima",
   "license": "ISC",
-  "description": "",
+  "description": "Task Manager Project",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
