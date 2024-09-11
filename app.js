@@ -3,6 +3,8 @@ const path = require('path');
 const mysql = require("mysql2/promise");
 const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const flash = require('connect-flash');
 const isLoggedIn = require('./middleware/isLoggedIn');
 
 dotenv.config({ path: './.env' });
@@ -32,6 +34,22 @@ app.use(express.static(publicDirectory));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
+
+// Setup session and flash messages
+app.use(session({
+    secret: 'your_secret_key', // Replace with a strong secret key
+    resave: false,
+    saveUninitialized: true
+}));
+app.use(flash());
+
+// Middleware to use flash messages
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    next();
+});
+
 app.set('view engine', 'hbs');
 app.use(isLoggedIn);
 

@@ -20,7 +20,7 @@
     </nav>
 
     <div class="container mt-4">
-    <h1>Tasks</h1>
+    <h1>Ongoing Tasks</h1>
     <ul>
         {{#each tasks}}
         <li>
@@ -34,6 +34,7 @@
 
     <form action="/tasks/add" method="POST">
         <div class="form-group">
+            <h5>Add your tasks</h5>
             <label for="title">Task Title</label>
             <input type="text" class="form-control" id="title" name="title" required>
         </div>
@@ -46,4 +47,9 @@
 </div>
 </body>
 
+<footer class="bg-dark text-white text-center py-3 mt-4"></footer>
+    <p>Guilherme Felix Carlini de Lima</p>
+    <p>Contact me: <a href="mailto:g.felixcarlinidelima@gmail.com" class="text-light">g.felixcarlinidelima@gmail.com</a></p>
+    <p>Phone: +49 (176) 6145-4231</p>
+</footer>
 </html>

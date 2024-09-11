@@ -27,3 +27,33 @@ nav li a:hover {
     color: yellow;
     text-decoration: none;
 }
+
+/* Ensure the HTML and body take up the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Wrapper for the entire page content */
+.wrapper {
+    padding-bottom: 50px; /* Adjust to the height of the footer */
+}
+
+/* Main content area */
+.content {
+    min-height: calc(100vh - 50px); /* Adjust to the height of the footer */
+}
+
+/* Footer styling */
+footer {
+    background-color: #002906; /* Dark background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Adjust this to your footer's height */
+    left: 0;
+    margin: 0; /* Ensure no margin */
+}
